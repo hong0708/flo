@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_album"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/iv_album"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_album_exp2"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_album_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUTTER"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/cv_album"
+        app:layout_constraintTop_toTopOf="@id/cv_album"
+        app:layout_constraintBottom_toTopOf="@id/tv_album_singer"/>
+
+    <TextView
+        android:id="@+id/tv_album_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방탄소년단"
+        android:textColor="#3F3F3F"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_album_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_album_title"
+        app:layout_constraintBottom_toTopOf="@id/tv_genre"/>
+
+    <TextView
+        android:id="@+id/tv_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2021.03.25 | 정규 | 댄스 팝"
+        android:textColor="#3F3F3F"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_album_singer"
+        app:layout_constraintTop_toBottomOf="@id/tv_album_singer"
+        app:layout_constraintBottom_toBottomOf="@id/cv_album"/>
+
+
+    <ImageView
+        android:id="@+id/iv_song_more"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/btn_player_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cv_album"
+        app:layout_constraintBottom_toBottomOf="@id/cv_album"/>
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/btn_player_play"
+        app:layout_constraintTop_toTopOf="@id/iv_song_more"
+        app:layout_constraintEnd_toStartOf="@id/iv_song_more"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
